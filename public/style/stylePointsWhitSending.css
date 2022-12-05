@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Rubik', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  color: grey;
+  font-size: 3vw;
+}
+
+h1 {
+  font-size: 5vw;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+h2 {
+  margin-top: 8%;
+  font-weight: 10;
+  margin-bottom: 2%;
+}
+#menu {
+  display: flex;
+  position: fixed;
+  bottom: 0vw;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px -5px 20px rgb(190, 190, 190);
+  width: 99vw;
+  justify-content: space-evenly;
+  border-radius: 7vw 7vw 0vw 0vw;
+}
+
+
+#menu a img {
+  width: 10vw;
+  margin-top: 2vw;
+}
+
+.menuFoot {
+  text-align: center;
+}
+
+.menuFoot p {
+  margin: 0vw 0vw 2vw;
+}
+
+.red {
+  color: rgb(224, 0, 77, 1);
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+#divPiechart {
+  display: flex;
+  justify-content: space-around;
+}
+
+.piechart1 {
+  margin-top: 2vh;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background-image: conic-gradient(rgba(224, 0, 77)0% 100%);
+}
+
+.piechart2 {
+  margin-top: 2vh;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background-image: conic-gradient(rgba(7, 29, 73)0% 30%, rgba(224, 0, 77)0%);
+}
+
+#numberpie2 {
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+  position: relative;
+  top: 40%;
+}
+
+#numberpie1 {
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+  position: relative;
+  top: 40%;
+}
+
+hr {
+  background-color: rgba(7, 29, 73, 1);
+  background-image: linear-gradient(90deg, rgba(224, 0, 77, 1), transparent);
+  border: 0;
+  height: 2px;
+  margin: 5vw;
+  margin-top: 2%;
+}
+
+.pieText {
+  text-align: center;
+}
+
+#textContainerDescription {
+  text-align: center;
+}
+
+#numberContainerqty {
+  display: flex;
+  padding-left: 16vw;
+}
+
+#sendText {
+  color: rgba(224, 0, 77);
+}
+
+#pointQty {
+  width: 40%;
+}
+
+#receibedText {
+  color: rgba(7, 29, 73);
+}
+
+#fondo {
+  padding: 2vw 0 2vh 0;
+  margin: 0vw -1.4vw;
+}
+
+.spanCenter {
+  padding: 2vh 0vh 0.5vh 18vh;
+  font-size: 2vw;
+}
+
+.btnGroup a {
+  text-decoration: none;
+  color: white;
+}
+
+.btnGroup {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+
+#sendButton {
+  background-color: rgb(224, 0, 77);
+  color: white;
+  text-decoration: none;
+  border-top-left-radius: 3vh;
+  border-style: none;
+  font-size: 2vh;
+  padding: 2vw 13vw;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#receivedButton {
+  background-color: rgb(7, 29, 73);
+  color: white;
+  text-decoration: none;
+  border-style: none;
+  border-top-right-radius: 3vh;
+  font-size: 2vh;
+  padding: 2vw 13vw;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.pAlign {
+  margin: 5vw;
+}
+
+.pointsRed {
+  color: white;
+  background-color: rgb(224, 0, 77);
+  border-radius: 2vh;
+  padding: 1.5vw;
+  letter-spacing: 0.3vw;
+  margin-right: 1vw;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.pointsBlue {
+  color: white;
+  background-color: rgb(7, 29, 73);
+  border-radius: 5vh;
+  padding: 1.5vw;
+  letter-spacing: 0.3vw;
+  margin-right: 1vw;
+}
+
+#iconActiva {
+  width: 6vh;
+  margin-right: 2vw;
+}
+
+input,
+select {
+  border-radius: 40vw;
+  border: 1px solid rgb(224, 0, 77);
+  height: 6vh;
+  width: 60vw;
+}
+
+#sendDescription {
+  width: 69%;
+}
+
+#enter {
+  background-color: rgb(224, 0, 77);
+  border-style: none;
+  border-radius: 9vw;
+  height: 5vh;
+  width: 30vw;
+}
+
+#sendPoints {
+  background-color: rgb(224, 0, 77);
+  border-style: none;
+  border-radius: 9vw;
+  color: white;
+  height: 6vh;
+  width: 20vw;
+  margin: 0vw 2vw;
+}
+
+@media only screen and (min-width: 768px) {
+  select {
+    font-size: 3vw;
+    color: gray;
+  }
+}
+
+@media all and (orientation:landscape) {
+  body {
+    font-size: 1.5vw;
+  }
+  #menu {
+    display: flex;
+    position: fixed;
+    bottom: 0vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px -5px 20px rgb(190, 190, 190);
+    width: 100vw;
+    margin-left: -5vw;
+    justify-content: space-evenly;
+    border-radius: 7vw 7vw 0vw 0vw;
+  }
+  #menu {
+    justify-content: center;
+  }
+
+  #menu a img {
+    width: 3vw;
+    margin-top: 2vw;
+  }
+
+  #menu p {
+    margin: 0vw 2vw 2vw;
+  }
+
+  h1 {
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 2vw;
+  }
+
+  body {
+    margin: 5vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 48vh;
+    grid-template-areas:
+      "a b"
+      "c c";
+  }
+
+  #divPiechart {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5vw;
+  }
+
+  .piechart1 {
+    grid-area: a;
+    margin: auto;
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .piechart2 {
+    margin: auto;
+    width: 10vw;
+    height: 10vw;
+  }
+
+  #numberpie2,
+  #numberpie1 {
+    font-size: 2vw;
+  }
+
+  .pieText {
+    text-align: center;
+  }
+
+  #enviarPuntos {
+    grid-area: b;
+  }
+
+  #miHistorial {
+    grid-area: c;
+  }
+
+  select {
+    border: 1px solid rgb(224, 0, 77);
+    height: 6vh;
+    width: 30vw;
+    font-size: 1.5vw;
+  }
+
+  #sendButton {
+    padding: 0vw 16.5vw;
+    height: 6vw;
+  }
+
+  #receivedButton {
+    padding: 0vw 16.5vw;
+    height: 6vw;
+  }
+
+  .pAlign {
+    margin: 4vw 5vw;
+  }
+
+  hr {
+    margin-bottom: 2%;
+  }
+
+  .pointsRed,
+  .pointsBlue {
+    border-radius: 5vh;
+    padding: 1vw;
+  }
+
+  .spanCenter {
+    padding: 2vh 0vh 0.5vh 18vh;
+    font-size: 1vw;
+  }
+
+  #sendDescription {
+    width: 63%;
+  }
+
+  #alumnos {
+    width: 50%;
+  }
+
+  #numberContainerqty {
+    padding-left: 8.5vw;
+  }
+
+  #sendPoints {
+    height: 6vh;
+    width: 13vw;
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+
+  h1,h2 {
+
+    margin-top: 5vw;
+  }
+
+  #menu {
+    display: flex;
+    position: fixed;
+    top: 0vw;
+    width:100vw;
+    height: 8vw;
+    justify-content: center;
+    border-radius: 0vw;
+    background-color: rgb(7, 29, 73);
+  box-shadow: 5px -5px 20px rgb(255, 255, 255);
+  }
+
+  .menuFoot p {
+    margin: 0%;
+    font-size: 1vw;
+  }
+
+}
+/*360×640 
+768x
+1280*/

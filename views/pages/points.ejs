@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+  <link rel="stylesheet" href="style/stylePointsWhitSending.css">
+  <script src="" async></script>
+  <title>Mis puntos</title>
+</head>
+
+<body>
+  <div id="menu">
+    <div class="menuFoot">
+      <a href="#"><img src="img/iconosMenu/mis-puntos-red.svg" alt="points"></a>
+      <p class="red">Mis puntos</p>
+    </div>
+    <div class="menuFoot">
+      <a href="ranking.html"><img src="img/iconosMenu/ranking-gray.svg" alt="ranking"></a>
+      <p>Ranking</p>
+    </div>
+    <div class="menuFoot">
+      <a href="#"><img src="img/iconosMenu/mi-perfil-gray.svg" alt="perfil"></a>
+      <p>Mi perfil</p>
+    </div>
+    <div class="menuFoot">
+      <a href="login.html"><img src="img/iconosMenu/logout-gray.svg" alt="exit"></a>
+      <p>Salir</p>
+    </div>
+  </div>
+  <div>
+    <h1 class="center">MIS PUNTOS</h1>
+    <hr />
+    <div id="divPiechart">
+      <div class="color">
+        <div class="piechart1">
+          <div id="numberpie1"><%= showPointsFromStudent[0][0].activa_points_balance %> </div>
+        </div>
+        <p class="pieText">DISPONIBLES<br> ¡Listos para enviar!</p>
+      </div>
+      <div>
+        <!--<%- include('../partials/piechartreceived'); %> -->
+        <div class="piechart2">
+          <div id="numberpie2"><%= studentReceivedRewards[0][0].points %></div>
+        </div>
+        <p class="pieText">TOTAL<br> <span id="sendText"> <a id="sentPoints" href="#">Enviados</a></span> | <span id="receibedText"> <a id="receivedPoints" href="#">Recibidos</a></span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="enviarPuntos">
+    <h2 class="center">ENVIAR PUNTOS</h2>
+    <hr />
+    <div id="fondo">
+      <p class="center">Alumnos Xarxatec Activa 2023</p>
+      <div class="search">
+        <img id="iconActiva" src="img/puntos-activa-logo.svg" alt="logoBuscarGente">
+        <select name="alumnos" id="alumnos">
+          <option value="r">Enviar puntos a...</option>
+          <option value="r">Antonio</option>
+          <option value="a">Lydia</option>
+          <option value="v">Juan</option>
+        </select>
+      </div>
+      <div class="spanCenter">Descripción del envío</div>
+      <form action="#">
+        <div id="textContainerDescription">
+          <input id="sendDescription" type="text"></div>
+        <div class="spanCenter">¿cuánto envías?</div>
+        <div id="numberContainerqty">
+          <input id="pointQty" type="number">
+          <button id="sendPoints">ENVIAR</button></div>
+      </form>
+    </div>
+  </div>
+  <div id="miHistorial">
+    <h2 class="center">MI HISTORIAL</h2>
+    <hr />
+    <div class="btnGroup">
+      <button id="sendButton"><u>ENVIADOS</u></button>
+      <a href="mispuntosRecibidos.html">
+        <button id="receivedButton">RECIBIDOS</a></button>
+    </div>
+    <div class="pAlign">
+      <div><span class="pointsRed"><b>100</b></span> PUNTOS ENVIADOS
+        30/07/2023</div>
+      <p> Bieeen que hemos ganado el premio de no code. Sin tu cerebrito
+        esto no habría sido posible. Un abrazo! </p>
+      <p> de parte de <b>Madonna Giménez</b></p>
+    </div>
+    <hr id="hrHistory" />
+    <div class="pAlign">
+      <div><span class="pointsRed"><b>20</b></span> PUNTOS ENVIADOS
+        30/09/2023</div>
+      <br>
+      Bieeen que hemos ganado el premio de no code. Sin tu cerebrito
+      esto no habría sido posible. Un abrazo!<br>
+      <p>de parte de <b>Miguel Sueca</b>
+    </div>
+    </p>
+    <hr id="hrHistory" />
+    <div class="pAlign">
+      <div><span class="pointsRed"><b>30</b></span> PUNTOS ENVIADOS
+        30/11/2023</div>
+      <br>
+      Bieeen que hemos ganado el premio de no code. Sin tu paciencia
+      esto no habría sido posible. Un abrazo!<br>
+      <p> de parte de <b>Pedro sanchez</b>
+    </div>
+    </p>
+    <hr id="hrHistory" />
+    <div class="pAlign">
+      <div><span class="pointsRed"><b>90</b></span> PUNTOS ENVIADOS
+        30/11/2023</div>
+      <br>
+      Bieeen que hemos ganado el premio de no code. Sin tu mirada
+      esto no habría sido posible. Un abrazo!<br>
+      <p> de parte de <b>M. Rajoy </b>
+    </div>
+    </p>
+    <hr id="hrHistory" />
+    <div class="pAlign">
+      <div><span class="pointsRed"><b>60</b></span> PUNTOS ENVIADOS
+        30/11/2023</div>
+      <br>
+      Bieeen que hemos ganado el premio de no code. Sin tu cabeza
+      esto no habría sido posible. Un abrazo!<br>
+      <p> de parte de <b>Metallica</b>
+    </div>
+    </p>
+    <br><br><br><br>
+  </div>
+  <script>
+    const numpie = document.getElementById("numberpie2");
+    const receivedPoints = document.getElementById("receivedPoints");
+    const sentPoints = document.getElementById("sentPoints");
+    
+    
+    function receivedSentRewards (e){
+        if(e.target.innerText == "Recibidos") numpie.innerHTML = `<%= studentReceivedRewards[0][0].points %>`;
+        if(e.target.innerText == "Enviados") numpie.innerHTML = `<%= studentSentRewards[0][0].points %>`;
+    }
+    
+receivedPoints.addEventListener("click", receivedSentRewards);
+sentPoints.addEventListener("click", receivedSentRewards);
+  
+    </script>
+</body>
+
+</html>
